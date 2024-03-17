@@ -277,15 +277,16 @@ export class News extends Component {
       <div className="container my-3">
         <h2> NewsWave - Top Headlines</h2>
         <div className="row">
-            <div className="col md-4">
-                <NewsItems title="myTitle" description="my description" imageUrl="https://d.newsweek.com/en/full/2363135/rudy-giuliani.jpg" newsUrl="TODO"/>
-            </div>
-            <div className="col md-4">
-                <NewsItems title="myTitle" description="my description" imageUrl="https://d.newsweek.com/en/full/2363135/rudy-giuliani.jpg" newsUrl="TODO"/>
-            </div>
-            <div className="col md-4">
-                <NewsItems title="myTitle" description="my description" imageUrl="https://d.newsweek.com/en/full/2363135/rudy-giuliani.jpg" newsUrl="TODO"/>   
-            </div>
+            {
+            this.state.articles.map(
+                (element)=>
+                {
+                    return <div className="col md-4" key={element.url}>
+                                <NewsItems title={(element.title?element.title:"").slice(0, 45)} description={(element.description?element.description:"").slice(0,88)} imageUrl={element.urlToImage} newsUrl={element.url}/>
+                           </div>
+                }
+              )
+            };
         </div>
       </div>
     )
