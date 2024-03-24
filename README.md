@@ -6,11 +6,11 @@ This is a React application that fetches and displays news articles using the [N
 
 1. Clone this repository to your local machine.
    ```
-   git clone https://github.com/your-username/react-news-app.git
+   git clone https://github.com/jaspinderkohli/news-app.git
    ```
 2. Navigate to the project directory.
    ```
-   cd react-news-app
+   cd news-app
    ```
 3. Install dependencies using npm or yarn.
    ```
